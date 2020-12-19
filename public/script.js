@@ -12,6 +12,9 @@ let joinButton = document.querySelector('.join-button');
 let container = document.querySelector('.container');
 let newUserDiv = document.querySelector('.new-user');
 let username = document.querySelector('#username');
+let emoji = document.querySelector(".icons");
+let emoticons = document.querySelector(".emojis");
+let allEmotes = document.querySelectorAll(".rows p");
 
 let user;
 joinButton.addEventListener('click',function(){
@@ -35,3 +38,19 @@ sendButton.addEventListener('click',function(){
    }
 
 })
+
+emoji.addEventListener("click",function(){
+   if(emoticons.classList.contains("hide")){
+      emoticons.classList.remove("hide");
+   }else{
+      emoticons.classList.add("hide");
+   }
+})
+
+
+for(let i=0;i<allEmotes.length;i++){
+ allEmotes[i].addEventListener('click',function(){
+    message.value = `${message.value}${allEmotes[i].innerHTML}`;
+    emoticons.classList.add("hide");
+ })
+}

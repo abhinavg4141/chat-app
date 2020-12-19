@@ -159,4 +159,20 @@
     width: 100%;
 }
 
-
+.emojis{
+    position: absolute;
+    width: 200px;
+    top: 57%;
+    left: 37%;
+    border: 2px solid mintcream;
+    background: antiquewhite;
+}
+.rows{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  align-items: center;
+}
+.rows p{
+ cursor: pointer;
+}
